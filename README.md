@@ -1,2 +1,2 @@
 # oKmeans
-ordinal K means clustering
+ordinal 1d K means clustering
