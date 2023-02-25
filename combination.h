@@ -2,11 +2,11 @@
 #include <cstdint>
 #include <cstdlib>
 
-std::vector<std::vector<uint8_t>> combination(std::vector<uint8_t> src, int r) {
-    std::vector<std::vector<uint8_t>> cs;
+std::vector<std::vector<int>> combination(std::vector<int> src, int r) {
+    std::vector<std::vector<int>> cs;
     if (r == 1) {
         for (auto i = 0; i < src.size(); i++) {
-            std::vector<uint8_t> c;
+            std::vector<int> c;
             c.push_back(src[i]);
             cs.push_back(c);
         }
@@ -16,7 +16,7 @@ std::vector<std::vector<uint8_t>> combination(std::vector<uint8_t> src, int r) {
     for (auto i = 0; i < r; i++) places[i] = i;
     while (true) {
         // push_back another combination
-        std::vector<uint8_t> c; c.reserve(r);
+        std::vector<int> c; c.reserve(r);
         for (auto i = 0; i < r; i++) {
             c.push_back(src[places[i]]);
         }
